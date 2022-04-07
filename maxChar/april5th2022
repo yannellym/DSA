@@ -1,0 +1,18 @@
+function maxChar(str){
+  let wordObj = {};
+  let maxChar = "";
+  let maxCount = 0;
+  var allChars = str.replaceAll(" ", "").split("")
+  for(let i=0; i<allChars.length; i++){
+    myChar = allChars[i]
+   wordObj[myChar] = wordObj[myChar] +1 || 1
+    
+    if(wordObj[myChar] > maxCount){
+      maxCount = wordObj[myChar]
+      maxChar= myChar
+    }
+  }
+  return maxChar
+}
+
+maxChar("I  loveeee     noodles")
