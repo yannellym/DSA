@@ -1,0 +1,7 @@
+function anagram(str1,str2){
+  let word1 = str1.toLowerCase().replaceAll(/[\W_]/g, "").split("").sort().join("")
+  let word2 = str2.toLowerCase().replaceAll(/[\W_]/g, "").split("").sort().join("")
+      console.log(word1 === word2)
+}
+
+anagram("Listen      !", "silent")
