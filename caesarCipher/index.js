@@ -8,7 +8,28 @@
 // caeserCipher("abcd", 100) === "wxyz";
 // caeserCipher("gurer ner 9 qbtf!", 13) === "there are 9 dogs!"
 
-function caesarCipher(str, shift) {}
+function cipher(str, shift){
+  let splitted = "qwertyuiopasdfghjklzxcvbnm".split("").sort()
+  let res = "";
+ 
+  for(let i=0; i<str.length; i++){
+    char = str[i]
+    const index = splitted.indexOf(char)
+    
+    if(index === -1){
+      res += char
+      continue;
+    }
+    const encodedIndex = (index + shift) % 26;
+    res += splitted[encodedIndex];
+  }
+  console.log(res)
+}
+  
+cipher("gurer ner 9 qbtf!", 13)
+cipher("abcd", 1) // === "bcde";
+cipher("yz", 1) //=== "za";
+cipher("abcd", 100)// === "wxyz";
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \
