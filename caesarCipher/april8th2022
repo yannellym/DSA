@@ -1,0 +1,18 @@
+function caesarCipher(str, shift) {
+  let abcs = "qwertyuiopasdfghjklzxcvbnm".split("").sort()
+  let res = "";
+
+  for(let i=0; i<str.length; i++){
+    let char = str[i]
+    let index = abcs.indexOf(char)
+
+    if(index === -1){
+      res += char
+      continue;
+    }
+
+    let encoded = (index+shift) % 26;
+    res+=abcs[encoded]
+  }
+    return res
+}
