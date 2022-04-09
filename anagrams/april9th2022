@@ -1,0 +1,8 @@
+function anagram(word1, word2){
+  let firstW= word1.replaceAll(/[\W_]/g,"").toLowerCase().split("").sort().join("");
+    let secondW= word2.replaceAll(/[\W_]/g,"").toLowerCase().split("").sort().join("");
+  console.log(firstW === secondW)
+
+}
+
+anagram(" leon?", "noel !")
