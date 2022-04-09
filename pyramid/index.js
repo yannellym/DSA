@@ -13,7 +13,19 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+function pyramid(n){
+  let addOn= 0;
+  for(let i=1; i<=n; i++){
+    let step = ""
+    step+= " ".repeat(n-i)
+    step+= "#".repeat(i+addOn)
+    step+= " ".repeat(n-i)
+    addOn+= 1
+    console.log(step)
+  }
+}
+
+pyramid(13)
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \
