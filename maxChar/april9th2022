@@ -1,0 +1,17 @@
+function maxChar(str){
+  let letterObj = {};
+  let maxChar = "";
+  let maxCount = 0;
+  for(let i=0; i < str.length; i++){
+    let char = str[i];
+    letterObj[char] = letterObj[char] + 1 || 1
+    
+    if(letterObj[char] > maxCount){
+      maxCount = letterObj[char] 
+      maxChar = char
+    }
+  }
+  console.log(maxChar)
+}
+
+maxChar("I like to eaaaaaaaaat")
