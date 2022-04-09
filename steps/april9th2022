@@ -1,0 +1,10 @@
+function steps(n){
+  for(let i=0; i<=n; i++){
+     let answer = ""
+      answer += "#".repeat(i)
+      answer += " ".repeat(n-i)
+     console.log(answer)
+  }
+}
+
+steps(8)
