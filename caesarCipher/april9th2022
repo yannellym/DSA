@@ -1,0 +1,19 @@
+function ceaserCipher(str, shift){
+  let abcs = "qwertyuiopasdfghjklzxcvbnm".split("").sort();
+  let secret = "";
+  for(let i=0; i<str.length; i++){
+    let char = str[i];
+    let abcIndex = abcs.indexOf(char);
+   
+    if(abcIndex === -1){
+      secret += char
+      continue;
+    }
+   let encoded = (abcIndex + shift) % 26 
+    secret += abcs[encoded]
+  }
+  console.log(secret)
+
+}
+
+ceaserCipher("gurer ner 9 qbtf!", 13)
