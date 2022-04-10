@@ -1,0 +1,19 @@
+function vowels(str){
+  let allVowels = "aeiou".split("")
+  let answer= 0;
+  for(let i=0; i< str.length; i++){
+    let char=str[i]
+   
+    for(let j=0; j<= allVowels.length; j++){
+      let vowel=allVowels[j];
+      
+      if(char === vowel){
+        answer++
+      }
+    }
+    
+  }
+  console.log(answer)
+}
+
+vowels("how many vowels here?") //6
