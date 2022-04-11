@@ -1,0 +1,8 @@
+
+function anagram(str1, str2){
+ let strOne= str1.toLowerCase().replaceAll(/[\W_]/g, "").split("").sort().join("")
+ let strTwo= str2.toLowerCase().replaceAll(/[\W_]/g, "").split("").sort().join("")
+ console.log(strOne === strTwo)
+}
+
+anagram("listen", " Silent!") // yes
