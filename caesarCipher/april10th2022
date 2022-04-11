@@ -1,0 +1,22 @@
+
+
+function cipher(str, n){
+  let abcs = "abcdefghijklmnopqrstuvwxyz"
+  let answer = "";
+  
+  for(let i=0; i< str.length; i++){
+    let char= str[i]
+    let index = abcs.indexOf(char)
+    
+    if(index === -1){
+      answer+= char
+      continue
+    }
+    
+    let encoded = (index + n) % 26
+    answer+= abcs[encoded]
+  }
+  console.log(answer)
+}
+
+cipher("gurer ner 9 qbtf!", 13) // there are 9 dogs
