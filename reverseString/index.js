@@ -5,7 +5,6 @@
 //   reverse('Hello!') === '!olleH'
 
 function reverse(str) {
-	return str.split("").reverse().join("");
 }
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
