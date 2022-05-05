@@ -7,14 +7,13 @@
 // chunk([0, 1, 2, 3, 4, 5], 4) -->  [[0, 1, 2, 3], [4, 5]]
 
 function chunk(array, size) {
-  let finalArray = [];
+  let store = [];
   let index = 0;
-  
-  while(index < array.length){
-    finalArray.push(array.slice(index, index + size))
-    index += size;
+  while(array.length > index){
+    store.push(array.slice(index, index + size));
+    index+= size;
   }
-  return finalArray;
+  return store;
 }
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \

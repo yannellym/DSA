@@ -12,21 +12,7 @@
 //   buzz
 
 function fizzBuzz(n) {
- let str = "";
- for(let i = 0; i < n; i++) {
-  
-  if(i % 3=== 0){
-    str+= "fizz"
-  } 
-
-   if(i % 5 === 0){
-     str+= "buzz"
-   }
-   if(str === ""){
-     str = i;
-   }
-   console.log(str)
- }
+ 
 }
 
 //fizzBuzz(100)

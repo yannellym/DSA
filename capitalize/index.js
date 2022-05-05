@@ -6,7 +6,7 @@
 //   capitalize('sHoRt AnD sToUt') --> 'Short And Stout'
 
 function capitalize(str) {
-  return str.toLowerCase().split(" ").map(word => word[0].toUpperCase() + word.slice(1)).join(" ") 
+  
 }
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______

@@ -1,0 +1,17 @@
+function caesarCipher(str, shift){
+let alphabet = "abcdefghijklmnopqrstuvwxyz".split("") //creates alphabet array in lowercase
+let strLower = str.toLowerCase(""); 
+let res = "";
+for(let i = 0; i < strLower.length; i++){
+    let char = strLower[i];
+    let index =  alphabet.indexOf(char);
+
+    if(index === -1){
+        res += char;
+        continue
+    }
+    let encoded = (index + shift) %26;
+    res += alphabet[encoded];
+  }
+  return res
+}

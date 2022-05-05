@@ -9,10 +9,7 @@
 //   anagrams('lol', 'lolc') --> False
 
 function anagrams(stringA, stringB) {
-  let one = stringA.toLowerCase().trim().replaceAll(/[\W_]/g,'').split("").sort().join("")
-  let two = stringB.toLowerCase().trim().replaceAll(/[\W_]/g,'').split("").sort().join("")
-
-  return  one === two
+  
   }
 
 //(/[\W_]/g,'') MEANS THAT "NON WORD". This is opposed to \w that will match words.

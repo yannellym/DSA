@@ -1,0 +1,10 @@
+
+
+ for(let i = 1; i <= n; i++) {
+    let steps = " ";
+    let hash = "#"
+    let res = ""
+    res += hash.repeat(i)
+    res += steps.repeat(n-i)
+    console.log(res)
+  }

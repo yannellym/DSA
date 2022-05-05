@@ -1,0 +1,6 @@
+
+function anagrams(stringA, stringB) {
+  let stringOne =  stringA.replaceAll(/[\W_]/g,"").toLowerCase().split("").sort().join("");
+  let stringTwo = stringB.replaceAll(/[\W_]/g,""). toLowerCase().split("").sort().join("")
+  return stringOne === stringTwo
+  }
