@@ -1,0 +1,16 @@
+function maxChar(str) {
+  let myObj = {};
+  let maxCount = 0;
+  let maxChar = "";
+  let strFixed = str.replaceAll(" ", "")
+  for(let i = 0; i < strFixed.length; i++){
+    let char = str[i]
+    myObj[char] = myObj[char] + 1 || 1;
+    
+    if(myObj[char] > maxCount){
+      maxCount = myObj[char];
+      maxChar = char;
+    }
+  }
+  return maxChar;
+}

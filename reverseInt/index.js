@@ -8,9 +8,7 @@
 //   reverseInt(-100) === -1
 
 function reverseInt(n) {
-  let str = String(n).split("")
-  return str[0] === "-"? Number((str[0] + str.slice(1).reverse().join(""))) : Number(str.reverse().join(""))
-  
+  return n[0] === "-"? (n[0] + n.split("").reverse().join("") :)
   }
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \

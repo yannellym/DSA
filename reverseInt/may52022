@@ -1,0 +1,4 @@
+function reverseInt(n) {
+  let str = String(n).split("")
+  return str[0] === "-"? Number((str[0] + str.slice(1).reverse().join(""))) : Number(str.reverse().join(""))
+  }
