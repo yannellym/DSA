@@ -1,0 +1,7 @@
+const vowels = (str) => {
+  let vowels = /[aeiou]/gi
+  let matched = str.match(vowels)
+  console.log(matched.length)
+}
+
+vowels("im a class developer using iterations")
