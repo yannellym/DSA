@@ -1,0 +1,16 @@
+
+function stringPatternSearch(text, pattern) {
+  let count = 0;
+  let patternChar = pattern[0];
+  for(let i = 0; i < text.length; i++) {
+    let char = text[i];
+    if(char == patternChar){
+      let test = text.slice(i, i + pattern.length);
+      if(pattern === test){
+        count++
+      }
+    }
+  }
+
+  return count
+}

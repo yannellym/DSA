@@ -3,7 +3,9 @@
 // stringPatternSearch("lollipop", "lol") --> 1
 // stringPatternSearch("lolol", "lol") --> 2
 
-function stringPatternSearch(text, pattern) {}
+function stringPatternSearch(text, pattern) {
+  
+}
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \
