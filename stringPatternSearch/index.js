@@ -4,7 +4,7 @@
 // stringPatternSearch("lolol", "lol") --> 2
 
 function stringPatternSearch(text, pattern) {
-  
+ 
 }
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______

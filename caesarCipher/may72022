@@ -1,0 +1,21 @@
+function caesarCipher(str, shift){
+    let abcs = "abcdefghijklmnopqrstuvwxyz".split("");
+    let res = "";
+    for(let i = 0; i < str.length; i++){
+      let char = str[i];
+      let index = abcs.indexOf(char);
+      if(index === -1){
+        res += char;
+        continue;
+      }
+      let encondedIndex = (index + shift) % 26;
+      res += abcs[encondedIndex];
+    }
+    return res
+  }
+    
+  caesarCipher("gurer ner 9 qbtf!", 13)
+  caesarCipher("abcd", 1) // === "bcde";
+  caesarCipher("yz", 1) //=== "za";
+  caesarCipher("abcd", 100)// === "wxyz";
+  
