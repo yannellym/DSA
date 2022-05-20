@@ -32,6 +32,31 @@ class LinkedList {
 		this.head = null;
 		this.length = 0;
 	}
+	shift(){
+		if(!this.head){  //if head is null it will return and stop executing immediately. 
+			return
+		}
+		let oldHead = this.head;
+		this.head = this.head.next;
+		this.length--; 
+		return oldHead;  //you need to return the old head.
+	}
+	pop(){
+		if(!this.head){ //if head is null it will return and
+			return
+		}
+		if(this.length === 1){
+			return this.shift();
+		}
+		let last = this.getLast();
+		let currentNode = this.head;
+		while(currentNode.next !== last){
+			currentNode = currentNode.next;
+		}
+		currentNode.next = null;
+		this.length--;
+		return last
+	}
 }
 
 
