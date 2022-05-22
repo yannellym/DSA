@@ -98,6 +98,33 @@ class LinkedList {
 		if(index >= this.length || index < 0){
 			return false;
 		}
+		
+		if( index === 0){
+			return this.shift();
+		}
+		const prevNode = this.get(index - 1);
+		const nodeToRemove = this.get(index);		
+
+		prevNode.next = prevNode.next.next;
+		this.length --;
+		return nodeToRemove;
+
+	}
+	insert(index, data){
+		if(index >= this.length || index < 0){
+			return false;
+		}
+		if( index === 0){
+			this.unshift(data);
+			return true;
+		}
+		const prevNode = this.get(index - 1);
+		const currentNode = this.get(index);
+		prevNode.next = new Node(data);
+		let insertedNode = prevNode.next;
+		insertedNode.next = currentNode;
+		this.length++;
+		return true;
 	}
 }
 
