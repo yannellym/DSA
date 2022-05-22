@@ -9,7 +9,17 @@
 // expect(q.dequeue()).toEqual(1);
 
 class Queue {
-	constructor() {}
+	constructor() {
+		this.data = []; //will represent data for example movie tickets or pizzas to be served. 
+		// right side = people getting served
+		// left side = new people joining queue
+	}
+	enqueue(val){
+		this.data.unshift(val); // unshift adds to beginning of array. Adds to left. Ex people joining a line.
+	}
+	dequeue(){
+		return this.data.pop() // remove last item from queue and returns it. 
+	}
 }
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
