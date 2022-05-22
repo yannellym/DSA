@@ -81,6 +81,24 @@ class LinkedList {
 		}
 		return currentNode;
 	}
+	set(index, data){
+		if(index >= this.length || index < 0){
+			return null
+		}
+		let counter = 0;
+		let currentNode = this.head;
+		while(counter < index){
+			counter++;
+			currentNode = currentNode.next;
+		}
+		currentNode.data = data;
+		return true;
+	}
+	remove(index){
+		if(index >= this.length || index < 0){
+			return false;
+		}
+	}
 }
 
 
@@ -256,7 +274,7 @@ describe('get(index)', () => {
 	});
 });
 
-describe.skip('set(index, data)', () => {
+describe('set(index, data)', () => {
 	it('returns falsy value on out of bounds or negative index.', () => {
 		const l = new LinkedList();
 		l.push(2);
